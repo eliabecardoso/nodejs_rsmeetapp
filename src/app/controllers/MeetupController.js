@@ -96,7 +96,7 @@ class MeetupController {
     return res.json(meetups);
   }
 
-  async delete(req, res) {
+  async destroy(req, res) {
     const meetup = await Meetup.findByPk(req.params.id);
 
     if (!meetup) return res.status(400).json({ error: 'Meetup not found' });
