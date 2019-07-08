@@ -6,6 +6,9 @@ import Meetup from '../models/Meetup';
 import File from '../models/File';
 import User from '../models/User';
 
+import Queue from '../../lib/Queue';
+import NotificationSubscription from '../jobs/NotificationSubscription';
+
 class MeetupController {
   async index(req, res) {
     const { page = 1, date } = req.query;
@@ -100,9 +103,16 @@ class MeetupController {
         .status(401)
         .json({ error: "You aren't organizer this Meetup" });
 
-    const meetupUpdated = await meetup.update(req.body);
+    await meetup.update(req.body);
 
-    return res.json(meetupUpdated);
+    await Queue.add(NotificationSubscription.key, {
+      meetupId: meetup.id,
+      content:
+        `As informações do Meetup ${meetup.title} ` +
+        `em que você está inscrito foram atualizadas! ;)`,
+    });
+
+    return res.json(meetup);
   }
 
   async destroy(req, res) {

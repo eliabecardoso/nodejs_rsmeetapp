@@ -58,7 +58,6 @@ class SubscriptionMeetupController {
       include: [
         {
           model: Meetup,
-          as: 'meetup',
           required: true,
           where: { date: meetup.date },
         },
