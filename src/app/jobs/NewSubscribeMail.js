@@ -3,7 +3,6 @@ import { pt } from 'date-fns/locale';
 import Mail from '../../lib/Mail';
 
 class NewSubscribeMail {
-  s;
   get key() {
     return 'NewSubscribeMail';
   }
