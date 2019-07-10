@@ -24,7 +24,7 @@ class MeetupController {
 
     const meetups = await Meetup.findAll({
       where,
-      include: [User],
+      include: [{ model: User, as: 'organizer' }],
       limit: 10,
       offset: 10 * page - 10,
     });
