@@ -9,7 +9,7 @@ Pre-requisites:
   - inst... no no no... run an instance data store structured(key/value) Redis as a container(can be the Redis-Alpine version) on [Docker (ENG)](https://hub.docker.com/_/redis/) | [Docker (PT-BR)](https://medium.com/@prog.tiago/redis-instalando-via-docker-58cb1d2cfb3b);
   - Sign up [mailtrap.io for mail notification](https://mailtrap.io) and get keys to configure your send of notifications(.env);
   - Sign up [sentry.io for reporting errors](https://sentry.io) to get DSN key for set in your configuration (.env);
-  - I think it's just this ;D.
+  - I think that's just it.  ;D
 
 Optional: install [yarn (recommended)](https://yarnpkg.com/pt-BR/docs/getting-started) or use npm
 
