@@ -27,5 +27,5 @@ Optional: install [yarn (recommended)](https://yarnpkg.com/pt-BR/docs/getting-st
 
 5. just enjoy! [I recommended use Insomnia(OpenSource Project) for tests of endpoint].
 
-##### Sorry for any mistake about my riting in English.
+##### Sorry for any mistake about my writing in English.
 ##### PS: Uma implementação-desafio da Rocketseat - Bootcamp (GoStack 7.0).
